@@ -6,3 +6,26 @@
 //
 
 import Foundation
+
+enum Token: CustomStringConvertible {
+	case number(Int)
+	case plus
+	case minus
+	case multi
+	case div
+	
+	var description: String {
+		switch self {
+			case .number(let num):
+				return "Number: \(num)"
+			case .plus:
+				return "Symbol: +"
+			case .minus:
+				return "Symbol: -"
+			case .multi:
+				return "Symbol: *"
+			case .div:
+				return "Symbol: /"
+		}
+	}
+}
